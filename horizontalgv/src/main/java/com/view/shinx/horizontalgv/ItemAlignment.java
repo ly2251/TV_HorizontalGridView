@@ -22,11 +22,10 @@ import android.graphics.Rect;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.binfun.tv.customer.ctvlive.widgets.opensource.GridLayoutManager.LayoutParams;
+import static com.view.shinx.horizontalgv.BaseGridView.ITEM_ALIGN_OFFSET_PERCENT_DISABLED;
+import static com.view.shinx.horizontalgv.RecyclerView.HORIZONTAL;
+import static com.view.shinx.horizontalgv.RecyclerView.VERTICAL;
 
-import static com.binfun.tv.customer.ctvlive.widgets.opensource.BaseGridView.ITEM_ALIGN_OFFSET_PERCENT_DISABLED;
-import static com.binfun.tv.customer.ctvlive.widgets.opensource.RecyclerView.HORIZONTAL;
-import static com.binfun.tv.customer.ctvlive.widgets.opensource.RecyclerView.VERTICAL;
 
 /**
  * Defines alignment position on two directions of an item view. Typically item
@@ -88,7 +87,7 @@ class ItemAlignment {
          * get alignment position relative to optical left/top of itemView.
          */
         public int getAlignmentPosition(View itemView) {
-            LayoutParams p = (LayoutParams) itemView.getLayoutParams();
+            GridLayoutManager.LayoutParams p = (GridLayoutManager.LayoutParams) itemView.getLayoutParams();
             View view = itemView;
             if (mViewId != 0) {
                 view = itemView.findViewById(mViewId);
